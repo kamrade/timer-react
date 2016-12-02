@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-		"test": "karma start"
+    "test": "karma start"
   },
   "repository": {
     "type": "git",
@@ -47,6 +47,7 @@
     "karma-webpack": "^1.7.0",
     "mocha": "^2.4.5",
     "node-sass": "^3.13.0",
+    "react-addons-test-utils": "^15.4.1",
     "sass-loader": "^4.0.2",
     "script-loader": "^0.7.0",
     "style-loader": "^0.13.1",
