@@ -27,6 +27,9 @@ var Countdown = React.createClass({
 			});
 			if (newCount == 0) {
 				clearTimeout(this.timer);
+				this.setState({
+					countdownStatus: 'stopped'
+				});
 			}
 		}, 1000);
 

@@ -24,6 +24,7 @@ describe('Countdown', ()=> {
 				done();
 			}, 1001)
 		});
+
 		it('should never set count less than 0', (done) => {
 			var countdown = TestUtils.renderIntoDocument(<Countdown />);
 			countdown.handleSetCountdown(1);
@@ -33,5 +34,16 @@ describe('Countdown', ()=> {
 				done();
 			}, 3001)
 		});
+
+		it('should be stopped after countdown finished work', (done) => {
+			var countdown = TestUtils.renderIntoDocument(<Countdown />);
+			countdown.handleSetCountdown(1);
+
+			setTimeout(() => {
+				expect(countdown.state.countdownStatus).toBe('stopped');
+				done();
+			}, 2001);
+		})
+
 	});
 });
