@@ -1,6 +1,12 @@
 @import './modules/styles.sass';
 @import './base/variables.sass';
 
+// Foundation
+@import 'base/foundation-settings';
+@import 'foundation';
+@include foundation-everything;
+
+// Components
 @import './components/navigation.sass';
 @import './components/clock.sass';
 @import './components/controls.sass';

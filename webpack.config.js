@@ -1,4 +1,5 @@
 'use strict'
+var path = require('path');
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
@@ -55,6 +56,11 @@ module.exports = {
 				test: /\.jsx?$/,
 				exclude: /(node_modules|lib)/
 			}
+		]
+	},
+	sassLoader: {
+		includePaths: [
+			path.resolve(__dirname, './node_modules/foundation-sites/scss')
 		]
 	}
 };
